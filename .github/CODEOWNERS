@@ -14,10 +14,10 @@
 # usernames individuais.
 
 # Todo o repositório.
-*                       @OWNER @MEMBRO2
+*                       @dhuberto #@OWNER @MEMBRO2
 
 # Workflows de CI/CD: quem mexe no pipeline precisa do aval do dono do repo.
-/.github/workflows/     @OWNER
+/.github/workflows/     @dhuberto #@OWNER
 
 # Manifestos de deploy: mudança de infra o time revisa junto.
-/k8s/                   @OWNER @MEMBRO2 @MEMBRO3
+/k8s/                  @dhuberto #@OWNER @MEMBRO2 @MEMBRO3
