@@ -43,9 +43,15 @@ jobs:
     #   matrix:
     #     python-version: ['3.10', '3.11', '3.12']
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    steps:                       # ← LISTA DE STEPS
+      - name: Checkout code      # ← STEP 1 (Checkout)
+        uses: actions/checkout@v4  # ← AQUI!
+        
+      - name: Setup Python       # ← STEP 2
+        uses: actions/setup-python@v5
+        
+      - name: Install dependencies  # ← STEP 3
+        run: pip install -r requirements.txt
 
       # TODO: instale o Python com actions/setup-python@v5. Comece fixando
       # '3.11'; ao introduzir a matrix isso vira ${{ matrix.python-version }}.
