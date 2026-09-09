@@ -17,8 +17,12 @@ name: CI
 #   - push com branches: [main]
 on:
   # TODO: substitua este bloco pelos gatilhos acima.
+   pull_request:
+    branches: [ main ]
+   push:
+    branches: [ main ]
   # workflow_dispatch permite disparar na mão enquanto você ainda está montando.
-  workflow_dispatch:
+   workflow_dispatch:
 
 # Menor privilégio: o GITHUB_TOKEN deste workflow só consegue LER o repositório.
 # Sem este bloco, o token vem com contents: write por padrão.
