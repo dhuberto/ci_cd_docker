@@ -8,7 +8,7 @@ on:
         description: JSON array of Python versions to test against
         required: false
         type: string
-        default: '["3.10", "3.11", "3.12"]'
+        default: '["3.10", "3.11"]'
 
 jobs:
   # Job de testes: roda em matrix de versoes do Python
